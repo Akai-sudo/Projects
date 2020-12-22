@@ -1,6 +1,8 @@
+//Basic Matrix calculator
 #include <stdio.h>
 #include <stdlib.h>
 
+//TODO
 void addition(char symbol) 
 {
 
@@ -28,7 +30,7 @@ int main()
 
     switch(symbol) {
         case '+':
-            void addition(symbol);
+            addition(symbol);
             break;
 
         case '-':

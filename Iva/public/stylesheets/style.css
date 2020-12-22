@@ -1,0 +1,24 @@
+body {
+    font-style: 'Helvetica';
+}
+
+head {
+    font-style: 'Helvetica';
+}
+
+.card {
+    margin-top: 1.2em;
+    margin-right: 2em;
+
+}
+
+.card:hover {
+    transform: scale(1.009);
+    transition: 0.5s;
+}
+
+.card:not(:hover) {
+    transform: scale(1.00);
+    transition: 0.5s;
+
+}

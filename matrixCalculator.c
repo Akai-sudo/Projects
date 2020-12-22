@@ -15,7 +15,7 @@ int main()
     int dim;
     scanf("%d", &dim);
 
-    printf("So far we haven't incorporated operations with non-square matrix dimensions. Knowing this, we will assume you are operating with a %d x %d matrix.\n", dim, dim);
+    printf("So far we haven't incorporated operations with non-square matrix dimensions. With that in mind, we will assume you are operating with a %d x %d matrix.\n", dim, dim);
 
     printf("If you wish to continue, please enter the symbol of the desired operation (e.g. + for addition): \n");
 

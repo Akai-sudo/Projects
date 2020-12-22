@@ -30,12 +30,24 @@ int main()
         matrix1[i] = malloc(dim * sizeof(int));
     }
     
+    int **matrix2 = malloc(dim * sizeof(int));
+    for(int i = 0; i < dim; i++) {
+        matrix2[i] = malloc(dim * sizeof(int));
+    }
+    
     //read user input
     for(int i = 0; i < dim; i++) {
         for(int j = 0; j < dim; j++) {
             scanf("%d", matrix1[i][j]);
         }
     }
+    
+    for(int i = 0; i < dim; i++) {
+        for(int j = 0; j < dim; j++) {
+            scanf("%d", matrix2[i][j]);
+        }
+    }
+    
 
     switch(symbol) {
         case '+':
@@ -53,8 +65,10 @@ int main()
     
     //free allocated memory for matrix int values
     for(int i = 0; i < dim; i++) {
-        free(matrix1[i]);    
+        free(matrix1[i]);
+        free(matrix2[i]);
     }
     free(matrix1);
+    free(matrix2);
     return 0;
 }

@@ -23,9 +23,18 @@ int main()
     scanf("%c", &symbol);
 
     printf("Please provide the values of your first matrix, row by row: \n");
+    
+    //allocate memory for creation of matrix
     int **matrix1 = malloc(dim * sizeof(int));
     for(int i = 0; i < dim; i++) {
-
+        matrix1[i] = malloc(dim * sizeof(int));
+    }
+    
+    //read user input
+    for(int i = 0; i < dim; i++) {
+        for(int j = 0; j < dim; j++) {
+            scanf("%d", matrix1[i][j]);
+        }
     }
 
     switch(symbol) {
@@ -40,6 +49,12 @@ int main()
         default:
             printf("Error. Invalid operation input. %c is not an acceptable form of operation on matrices\n", symbol);
     }
-    switch()
+    
+    
+    //free allocated memory for matrix int values
+    for(int i = 0; i < dim; i++) {
+        free(matrix1[i]);    
+    }
+    free(matrix1);
     return 0;
 }
